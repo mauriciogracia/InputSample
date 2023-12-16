@@ -1,38 +1,61 @@
 ﻿@page
 @{
-    ViewData["Title"] = "Make Payment";
+    ViewData["Title"] = "Payment Details";
 }
 
 <div class="text-center">
     <div class="payment-form">
-        <h2>Make Payment</h2>
+        <h2>Payment Details</h2>
 
-        <div>
+        <div class="payment-amount">
             <label for="amount">Amount:</label>
-            <label id="amount" readonly="readonly">$500</label>
+            <label id="amount" readonly="readonly" >$500</label>
         </div>
 
         <div>
-            <label for="selectMethod">Select Method:</label></br>
+            <label for="selectMethod" class="payment-lbl">Select method:</label>
             <img class="payment-icon" src="/img/icon_00_visa.png" alt="Visa">
-            <img class="payment-icon" src="/img/icon_01_mastercard.png" alt="MasterCard">
+            <img class="payment-icon icon-selected" src="/img/icon_01_mastercard.png" alt="MasterCard">
             <img class="payment-icon" src="/img/icon_02_t-paga.png" alt="MasterCard">
 
         </div>
 
         <div>
-            <label for="nameOnCard">Name on Card:</label>
+            <label for="nameOnCard" class="payment-lbl">Name on Card:</label>
             <input type="text" id="nameOnCard" name="NameOnCard">
         </div>
 
         <div>
-            <label for="cardNumber">Card Number:</label>
+            <label for="cardNumber" class="payment-lbl">Card Number:</label>
             <input type="text" id="cardNumber" name="CardNumber">
         </div>
 
         <div>
-            <label for="expiryDate">Expiry Date:</label>
-            <input type="text" id="expiryDate" name="ExpiryDate" size="5" maxlength="5">
+            <label class="payment-lbl">Expiry Date: MM/YY</label>
+                <div class="expiry-date-picker">
+                    <select id="expiryMonth">
+                        <option value="01">01 - January</option>
+                        <option value="02">02 - February</option>
+                        <option value="03">03 - March</option>
+                        <option value="04">04 - April</option>
+                        <option value="05">05 - May</option>
+                        <option value="06">06 - June</option>
+                        <option value="07">07 - July</option>
+                        <option value="08">08 - February</option>
+                        <option value="09">09 - September</option>
+                        <option value="10">10 - October</option>
+                        <option value="11">11 - November</option>
+                        <option value="12">12 - December</option>
+                    </select>
+                    <select id="expiryYear">
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select>
+            </div>
+        </div>
+        <div>
             <label for="securityCode">Security Code:</label>
             <input type="text" id="securityCode" name="SecurityCode" size="3" maxlength="3">
         </div>
@@ -42,7 +65,7 @@
             <input type="text" id="zipCode" name="ZipCode" size="6" maxlength="6">
         </div>
 
-        <button type="button" class="payment-btn">PAY</button>
+        <button type="button" class="payment-btn">CONTINUE WITH PAYMENT</button><br />
     </div>
 </div>
 

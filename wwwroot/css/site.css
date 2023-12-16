@@ -26,12 +26,29 @@ body {
     min-height: 600px;
 }
 
-.payment-icon {
-    width: 100px ;
+.payment-amount {
+    font-size: x-large ;
+    font-weight: 500 ;
+    background-color: lightgreen
 }
 
+.payment-lbl {
+    font-weight: bold ;
+}
+
+.payment-icon {
+    width: 70px ;
+}
+
+.icon-selected {
+    border: solid 5px green ;
+    padding: 5px;
+    border-radius: 10px ;
+}
 .payment-btn {
-    width: 200px;
+    width: 300px;
     background-color: green;
+    border-radius: 10px;
     color: white;
+    align-self: center
 }
