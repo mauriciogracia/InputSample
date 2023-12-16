@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border: solid 2px black;
+    max-width: 500px;
+    min-height: 600px;
+}
+
+.payment-icon {
+    width: 100px ;
+}
+
+.payment-btn {
+    width: 200px;
+    background-color: green;
+    color: white;
+}

@@ -1,0 +1,48 @@
+﻿@page
+@{
+    ViewData["Title"] = "Make Payment";
+}
+
+<div class="text-center">
+    <div class="payment-form">
+        <h2>Make Payment</h2>
+
+        <div>
+            <label for="amount">Amount:</label>
+            <label id="amount" readonly="readonly">$500</label>
+        </div>
+
+        <div>
+            <label for="selectMethod">Select Method:</label></br>
+            <img class="payment-icon" src="/img/icon_00_visa.png" alt="Visa">
+            <img class="payment-icon" src="/img/icon_01_mastercard.png" alt="MasterCard">
+            <img class="payment-icon" src="/img/icon_02_t-paga.png" alt="MasterCard">
+
+        </div>
+
+        <div>
+            <label for="nameOnCard">Name on Card:</label>
+            <input type="text" id="nameOnCard" name="NameOnCard">
+        </div>
+
+        <div>
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="CardNumber">
+        </div>
+
+        <div>
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="ExpiryDate" size="5" maxlength="5">
+            <label for="securityCode">Security Code:</label>
+            <input type="text" id="securityCode" name="SecurityCode" size="3" maxlength="3">
+        </div>
+
+        <div>
+            <label for="zipCode">Zip/Postal Code:</label>
+            <input type="text" id="zipCode" name="ZipCode" size="6" maxlength="6">
+        </div>
+
+        <button type="button" class="payment-btn">PAY</button>
+    </div>
+</div>
+
